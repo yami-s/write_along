@@ -8,7 +8,9 @@ class Category(models.Model):
         
         def __str__(self):
             return self.name
-class Article(models.Model):
+
+
+class Post(models.Model):
     author = models.ManyToManyField(User, on_delete=models.CASCADE, null=True, blank=True)
     title = models.CharField(max_length=200)
     text = models.TextField()
